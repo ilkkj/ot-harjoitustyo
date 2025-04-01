@@ -2,7 +2,7 @@
 name = "ot-harjoitustyo"
 version = "0.1.0"
 description = ""
-authors = ["ilkkj <ilkkajoa@gmail.com>"]
+authors = ["ilkkj <149906551+ilkkj@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
