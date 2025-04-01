@@ -1,6 +1,7 @@
 # Työaikakirjanpito
 
-| päivä | aika | mitä tein  |
+| päivä | aika (h) | mitä tein  |
 | :----:|:-----| :-----|
 |25.3   | 1,5   | Sovelluksen suunnittelua, dokumentaatio |
-| yht   | 1,5   | | 
+|1.4   | 11   | Sovelluksen pohjan toteutus |
+| yht   | 12,5   | | 
