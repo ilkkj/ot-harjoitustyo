@@ -1,16 +1,24 @@
-import pygame
-from sprites import Player, Box
+import settings
+
 
 class Level:
-    def __init__(self, rows, cols, cell_size):
-        self.rows = rows
-        self.cols = cols
-        self.cell_size = cell_size
+    """Manages the game level structure"""
 
-    #one basic grid for now
+    def __init__(self):
+        pass
+
     def generate_grid(self):
-        matrix = [[0] * self.cols for _ in range(self.rows)]
-        for i in range(self.cols):
-            matrix[0][i] = 1
-        matrix[-1][self.cols // 2] = 2
-        return matrix
+        """Creates an empty grid"""
+        grid = [[settings.EMPTY for _ in range(
+            settings.COLS)] for _ in range(settings.ROWS)]
+        return grid
+
+    def generate_new_boxes(self, grid, num_rows_to_fill=3):
+        """Adds boxes to the grid"""
+        rows_to_fill = min(num_rows_to_fill, settings.ROWS)
+
+        for r in range(rows_to_fill):
+            for c in range(settings.COLS):
+                if grid[r][c] == settings.EMPTY:
+                    grid[r][c] = settings.BOX
+        return grid
