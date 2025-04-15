@@ -1,10 +1,13 @@
 import sys
-from game import Game
+import pygame
+from game_loop import GameLoop
 
 
 def launch_game():
-    game = Game()
+    pygame.init()
+    game = GameLoop()
     game.run()
+    pygame.quit()
     sys.exit()
 
 
