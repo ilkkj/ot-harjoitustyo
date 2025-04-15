@@ -10,7 +10,7 @@ Sovellus on Space Invadersin kaltainen peli, jossa pelaajan tulee tuhota yläpuo
 - [x] Pelikentän laatat luodaan
 - [x] Käyttäjä voi tuhota tiettyjä laattoja tehdäkseen tilaa hahmolleen (kaikkia laattoja ei voi tuhota)
 - [ ] Uusia laattoja luodaan jos pelaaja selviää edellisestä tasosta
-- [ ] Peli päättyy jos pelaajaan osuu laatta
+- [x] Peli päättyy jos pelaajaan osuu laatta
 
 ## Jatkokehitys
 
