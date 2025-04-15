@@ -5,6 +5,9 @@ Olen toteuttamassa *jonkin sortin* **pelin**.
 #### Pelin nykytila:
 Pelissä voi liikkua vasemmalle ja oikealle. Pelaaja voi ampua lasereita painamalla välilyöntiä. Jos laser osuu tuhottavaan laatikkoon, laatikko tuhoutuu. Laatikot putoavat tietyn ajan kuluttua alas. Peli alkaa alusta jos pelaajaan osuu laatikko.
 
+## Release
+ [Viikko 5 release](https://github.com/ilkkj/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
