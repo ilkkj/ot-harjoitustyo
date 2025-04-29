@@ -10,10 +10,11 @@ Pelissä voi liikkua vasemmalle ja oikealle. Pelaaja voi ampua lasereita painama
 
 ## Dokumentaatio
 
+- [Käyttöohje](/dokumentaatio/kayttoohje.md)
 - [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
 - [Työaikakirjanpito](/dokumentaatio/tuntikirjanpito.md)
 - [Changelog](/dokumentaatio/changelog.md)
-- [Arkkitehtuuri](/dokumentaatio/arkkitehtuuri.md)
+- [Arkkitehtuurikuvaus](/dokumentaatio/arkkitehtuuri.md)
 
 
 ## Käynnistys

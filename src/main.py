@@ -1,6 +1,6 @@
 import sys
 import pygame
-from game_loop import GameLoop
+from ui.game_loop import GameLoop
 
 
 def launch_game():

@@ -9,4 +9,6 @@
 |8.4   |  5  | Testien luominen, dokumentaatio yms |
 |14.4   |  9  | Koodin rakenteen muutos |
 |15.4   |  8  | Uudet laatikot ja niiden putoamisen logiikka,testien päivitys, dokumentaatio yms |
-| yht   | 53,5   | | 
+|28.4   |  4  | Level-luokan uudet metodit |
+|29.4   |  10  | Level-luokan uudet metodit jatkuu, uudet pelin tasot, dokumentaatio yms |
+| yht   | 67,5   | | 

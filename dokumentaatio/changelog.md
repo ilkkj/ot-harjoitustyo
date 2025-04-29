@@ -15,7 +15,7 @@
 - Luotu tiedosto yleisiä asetuksia varten
 - Pelaaja voi nyt rikkoa laatikoita ampumalla lasereita (välilyönti).
 - Pelaajan hahmon muoto muutettu
-- Luokilla ja funktioilla on alustavat Docstring dokumentoinnit.
+- Luokilla ja funktioilla on alustavat Docstring-dokumentoinnit.
 - Tasojen luonti testataan.
 - Pelaajan liikkeiden muutosta testataan.
 
@@ -28,3 +28,13 @@
 - Laserin kokoa pienennetty ja nopeutta kasvatettu.
 - Pelaaja voi sammuttaa pelin painamalla (Q) ja aloittaa pelin alusta painamalla (R).
 - Peli alkaa alusta jos pelaajaan osuu laatikko.
+
+## Viikko 6
+
+- Level-luokka ottaa nyt vastaan listan pelin tasoista, mikä mahdollistaa useamman pelin tason.
+- Uusia metodeja Level-luokkaan uuden tason lataamista- ja pitkien metodien jakamista varten.
+- Uusi LevelData-luokka, joka antaa pelin tasojen datan matriiseina.
+- Pelissä on nyt 8 uutta pelattavaa tasoa
+- Sprites-luokat jaettu omiin tiedostoihinsa.
+- Tiedostoja jaettu alihakemistoihin.
+- Docstring-dokumentointia lisätty.

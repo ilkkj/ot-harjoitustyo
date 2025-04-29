@@ -1,4 +1,4 @@
 [run]
 source = src
-omit = src/**/__init__.py,src/tests/**,src/main.py,src/settings.py,src/renderer.py,src/clock.py,src/event_queue.py,src/game_loop.py
+omit = src/**/__init__.py,src/tests/**,src/main.py,src/ui/**,src/level/level_data.py,src/settings.py,src/clock.py,src/event_queue.py
 
