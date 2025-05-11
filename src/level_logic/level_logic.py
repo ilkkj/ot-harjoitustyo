@@ -6,7 +6,7 @@ from sprites.laser import Laser
 import settings
 
 
-class Level:
+class LevelLogic:
     """Manages the game level structure and sprite interactions"""
 
     def __init__(self, initial_grid_data=None):
@@ -27,6 +27,7 @@ class Level:
             self._create_default_grid()
 
         self.next_level_index = 0
+        self.hits = 0
 
         self.player = None
         self.all_sprites = pygame.sprite.Group()
@@ -157,8 +158,9 @@ class Level:
         """
         pygame.sprite.groupcollide(
             self.laser_sprites, self.solid_box_sprites, True, False)
-        pygame.sprite.groupcollide(
-            self.laser_sprites, self.box_sprites, True, True)
+        if pygame.sprite.groupcollide(
+                self.laser_sprites, self.box_sprites, True, True):
+            self.hits += 1
         pygame.sprite.groupcollide(
             self.laser_sprites, self.wall_sprites, True, False)
         pygame.sprite.groupcollide(
@@ -178,7 +180,12 @@ class Level:
         If all boxes have been removed and there is a next level
         available in the `grid_data` list, loads the next level by calling `_start_new_level`.
         """
-        if not self.all_box_sprites and self.next_level_index < len(self.grid_data):
+
+        if not self.all_box_sprites:
+            if self.next_level_index == len(self.grid_data):
+                pygame.event.post(pygame.event.Event(
+                    settings.GAME_WON_EVENT))
+                return
             self._start_new_level(self.grid_data[self.next_level_index])
 
     def _start_new_level(self, level_map):
@@ -240,3 +247,12 @@ class Level:
             grid_data.append(row_data)
 
         self.grid_data = [grid_data]
+
+    def get_score(self):
+        """Calculates the score
+
+        Returns:
+            int: Number of times the player has destroyed a box.
+        """
+        score = self.hits
+        return score

@@ -1,6 +1,6 @@
 import sys
 import pygame
-from ui.game_loop import GameLoop
+from ui.game.game_loop import GameLoop
 
 
 def launch_game():
@@ -11,5 +11,5 @@ def launch_game():
     sys.exit()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     launch_game()

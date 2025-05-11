@@ -38,3 +38,10 @@
 - Sprites-luokat jaettu omiin tiedostoihinsa.
 - Tiedostoja jaettu alihakemistoihin.
 - Docstring-dokumentointia lisätty.
+
+## Viikko 7
+
+- Lisätty päävalikko, jossa valintana pelin käynnistys, "high scores", käyttöohjeet ja pelin sammutus.
+- Tiedostorakennetta uudistettu, muutamien luokkien nimiä muutettu kuvaavammiksi.
+- Sovellus hakee käyttöohjeet ja pelin tasot erillisistä tiedostoista, jotka on muutettavissa.
+- Sovellus tallentaa pisteet tietokantaan, jos pelaaja läpäisee pelin.

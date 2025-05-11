@@ -2,7 +2,7 @@ import pygame
 import settings
 
 
-class Renderer:
+class GameRenderer:
     """Responsible for drawing all game elements onto the display."""
 
     def __init__(self, display, level):

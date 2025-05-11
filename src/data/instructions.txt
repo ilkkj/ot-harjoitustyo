@@ -1,0 +1,10 @@
+Use LEFT and RIGHT arrows or (A) and (D) to move.
+Press SPACE to shoot a laser.
+
+Lasers destroy brown boxes; gray boxes are indestructible.
+You gain score by destroying brown boxes.
+Do not get hit by falling boxes from above.
+If hit, the game restarts.
+
+Press (R) to restart the game.
+Press (Q) or ESC to return to menu.

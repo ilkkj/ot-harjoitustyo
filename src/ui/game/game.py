@@ -1,9 +1,10 @@
 import pygame
+import sys
 import settings
 
 
 class Game:
-    """Represents the main game loop and structure.
+    """Represents a single game instance.
 
     Handles the event processing, updates, rendering, and game state.
     """
@@ -23,10 +24,11 @@ class Game:
         self._event_queue = event_queue
         self._running = False
         self._restart_requested = False
+        self._win = False
         self._cell_size = settings.CELL_SIZE
 
     def start(self):
-        """Starts the main game loop.
+        """Starts the game loop.
 
         The loop continues until the game is quit or a restart is requested.
 
@@ -53,22 +55,25 @@ class Game:
         """
         for event in self._event_queue.get():
             if event.type == pygame.QUIT:
-                self._running = False
-                return False
+                pygame.quit()
+                sys.exit()
 
             if event.type == settings.GAME_RESTART_EVENT:
                 self._restart()
 
+            if event.type == settings.GAME_WON_EVENT:
+                self._game_cleared()
+
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
+                if event.key in (pygame.K_LEFT, pygame.K_a):
                     self._level.move_player(dx=-settings.CELL_SIZE)
-                elif event.key == pygame.K_RIGHT:
+                elif event.key in (pygame.K_RIGHT, pygame.K_d):
                     self._level.move_player(dx=settings.CELL_SIZE)
                 elif event.key == pygame.K_SPACE:
                     self._level.shoot_laser()
                 elif event.key == pygame.K_r:
                     self._restart()
-                elif event.key == pygame.K_q:
+                elif event.key in (pygame.K_q, pygame.K_ESCAPE):
                     self._running = False
                     return False
         return True
@@ -76,7 +81,6 @@ class Game:
     def _update(self):
         """Updates the game state."""
         current_time = self._clock.get_ticks()
-
         self._level.update(current_time)
 
     def _render(self):
@@ -87,3 +91,25 @@ class Game:
         """Initiates a game restart."""
         self._running = False
         self._restart_requested = True
+
+    def _game_cleared(self):
+        """Handles the game cleared event."""
+        self._running = False
+        self._win = True
+
+    def is_game_cleared(self):
+        """Checks if the game was cleared by the player.
+
+        Returns:
+            bool: True if the player cleared the game.
+        """
+        if self._win:
+            return True
+
+    def get_score(self):
+        """Retrieves the player's current score.
+
+        Returns:
+            int: The score as returned by the level object.
+        """
+        return self._level.get_score()

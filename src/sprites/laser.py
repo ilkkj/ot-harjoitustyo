@@ -19,7 +19,7 @@ class Laser(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = xy[0]
         self.rect.bottom = xy[1]
-        self.speed_y = -15
+        self.speed_y = - settings.CELL_SIZE // 3
 
     def update(self):
         """Updates the laser's position and removes it if it goes off-screen."""

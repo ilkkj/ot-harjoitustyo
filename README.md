@@ -1,12 +1,12 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Box Breaker
 
-Pelissä pelaajan tulee tuhota yläpuoleltaan laattoja, jotka putoavat muuten pelaajan päälle.
+Pelissä pelaajan tulee tuhota yläpuoleltaan laatikoita, jotka putoavat muuten pelaajan päälle.
 
 #### Pelin nykytila:
 Pelissä voi liikkua vasemmalle ja oikealle. Pelaaja voi ampua lasereita painamalla välilyöntiä. Jos laser osuu tuhottavaan laatikkoon, laatikko tuhoutuu. Laatikot putoavat tietyn ajan kuluttua alas. Peli alkaa alusta jos pelaajaan osuu laatikko.
 
 ## Release
- [Viikko 6 release](https://github.com/ilkkj/ot-harjoitustyo/releases/tag/viikko6)
+ [Viimeisin release](https://github.com/ilkkj/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Dokumentaatio
 
@@ -15,6 +15,7 @@ Pelissä voi liikkua vasemmalle ja oikealle. Pelaaja voi ampua lasereita painama
 - [Työaikakirjanpito](/dokumentaatio/tuntikirjanpito.md)
 - [Changelog](/dokumentaatio/changelog.md)
 - [Arkkitehtuurikuvaus](/dokumentaatio/arkkitehtuuri.md)
+- [Testausdokumentti](/dokumentaatio/testaus.md)
 
 
 ## Käynnistys
@@ -25,7 +26,13 @@ Pelissä voi liikkua vasemmalle ja oikealle. Pelaaja voi ampua lasereita painama
 poetry install
 ```
 
-2. Käynnistä sovellus komennolla:
+2. Suorita alustus komennolla:
+
+```bash
+poetry run invoke build
+```
+
+3. Käynnistä sovellus komennolla:
 
 ```bash
 poetry run invoke start
