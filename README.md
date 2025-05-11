@@ -6,7 +6,7 @@ Pelissä pelaajan tulee tuhota yläpuoleltaan laatikoita, jotka putoavat muuten 
 Pelissä voi liikkua vasemmalle ja oikealle. Pelaaja voi ampua lasereita painamalla välilyöntiä. Jos laser osuu tuhottavaan laatikkoon, laatikko tuhoutuu. Laatikot putoavat tietyn ajan kuluttua alas. Peli alkaa alusta jos pelaajaan osuu laatikko.
 
 ## Release
- [Viimeisin release](https://github.com/ilkkj/ot-harjoitustyo/releases/tag/viikko6)
+ [Viimeisin release](https://github.com/ilkkj/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Dokumentaatio
 
